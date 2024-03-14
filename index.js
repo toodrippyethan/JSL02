@@ -54,9 +54,6 @@ const addNewGoal = () => {
     }
 
     //add goal if not duplicate still
-    
-
-
     const newGoal = document.createElement('li');
     newGoal.textContent = goalInput;
     goalList.appendChild(newGoal);
