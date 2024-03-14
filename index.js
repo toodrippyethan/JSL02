@@ -37,7 +37,9 @@ const addNewGoal = () => {
     // Focus on preventing duplicates for now.
 
 
-    //check duplicate
+//THE CODE
+
+    //To check for duplicates
     const existingGoals = goalList.querySelectorAll('li');
     let isDuplicate = false;
     existingGoals.forEach(goal => {
@@ -47,7 +49,7 @@ const addNewGoal = () => {
         } 
     });
     
-    //alert
+    //The alert message if a dupicate is found
     if (isDuplicate) {
         alert('Goal already exists! Enter Different goal.');
         return;
