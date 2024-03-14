@@ -35,7 +35,28 @@ const addNewGoal = () => {
     // ⚠️ Hint 4: Event listener
     // The event listener that removes goals when clicked is not related to this issue.
     // Focus on preventing duplicates for now.
+
+
+    //check duplicate
+    const existingGoals = goalList.querySelectorAll('li');
+    let isDuplicate = false;
+    existingGoals.forEach(goal => {
+        if (goal.textContent.trim() === goalInput.trim()){
+            isDuplicate = true;
+            return;
+        } 
+    });
     
+    //alert
+    if (isDuplicate) {
+        alert('Goal already exists! Enter Different goal.');
+        return;
+    }
+
+    //add goal if not duplicate still
+    
+
+
     const newGoal = document.createElement('li');
     newGoal.textContent = goalInput;
     goalList.appendChild(newGoal);
